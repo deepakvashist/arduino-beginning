@@ -2,18 +2,23 @@ int led = 2;
 int button = 3;
 int isButtonActive = 0;
 
-void setup() {
+void setup()
+{
   pinMode(led, OUTPUT);
   pinMode(button, INPUT);
 }
 
-void loop() {
+void loop()
+{
   isButtonActive = digitalRead(button);
-  
-  if(isButtonActive == HIGH) {
+
+  if (isButtonActive == HIGH)
+  {
     digitalWrite(led, HIGH);
     delay(5000);
-  } else {
+  }
+  else
+  {
     digitalWrite(led, LOW);
   }
 }
